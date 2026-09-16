@@ -40,5 +40,5 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("org.mozilla.geckoview:geckoview-omni:158.0.20260915042311")
+    implementation("org.mozilla.geckoview:geckoview-omni:156.0.20260909172920")
 }

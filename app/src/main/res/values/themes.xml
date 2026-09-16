@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Mosk" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/mosk_bg</item>
+        <item name="android:navigationBarColor">@color/mosk_bg</item>
+        <item name="android:colorAccent">@color/mosk_purple</item>
+    </style>
+</resources>

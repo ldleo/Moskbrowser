@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/bg_card">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp">
+        <TextView android:id="@+id/tvDialogTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Nuevo perfil"
+            android:textColor="@color/mosk_text" android:textSize="28sp"/>
+        <EditText android:id="@+id/etName" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="20dp"
+            android:hint="Nombre del perfil (ej. Banco PT)"
+            android:textColor="@color/mosk_text" android:textColorHint="@color/mosk_muted"
+            android:background="@drawable/bg_field"/>
+        <EditText android:id="@+id/etUrl" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="12dp"
+            android:hint="URL del sitio (https://...)"
+            android:textColor="@color/mosk_text" android:textColorHint="@color/mosk_muted"
+            android:background="@drawable/bg_field" android:inputType="textUri"/>
+        <TextView android:id="@+id/tvUrlError" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:visibility="gone"
+            android:text="⚠️ URL inválida (incluye http:// o https://)"
+            android:textColor="@color/mosk_red" android:paddingTop="8dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="Modelo de Dispositivo:"
+            android:textColor="@color/mosk_muted"/>
+        <Spinner android:id="@+id/spinnerDevice" android:layout_width="match_parent"
+            android:layout_height="58dp" android:background="@drawable/bg_field"/>
+        <TextView android:id="@+id/tvProxyStatus" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="14dp"
+            android:gravity="center_vertical" android:paddingStart="18dp"
+            android:text="Sin proxy (directo)" android:textColor="@color/mosk_muted"
+            android:background="@drawable/bg_field" android:clickable="true"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+            android:layout_marginTop="14dp">
+            <Button android:id="@+id/btnSave" android:layout_width="0dp"
+                android:layout_height="56dp" android:layout_weight="1"
+                android:text="Guardar perfil" android:textAllCaps="false"/>
+            <Button android:id="@+id/btnSaveOpen" android:layout_width="0dp"
+                android:layout_height="56dp" android:layout_weight="1"
+                android:layout_marginStart="8dp" android:text="Guardar y abrir"
+                android:textAllCaps="false" android:background="@drawable/bg_purple"/>
+        </LinearLayout>
+        <TextView android:id="@+id/btnCancel" android:layout_width="match_parent"
+            android:layout_height="52dp" android:gravity="center" android:text="CANCELAR"
+            android:textColor="@color/mosk_muted" android:clickable="true"/>
+    </LinearLayout>
+</ScrollView>

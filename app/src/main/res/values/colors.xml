@@ -1,0 +1,12 @@
+<resources>
+    <color name="mosk_bg">#0B0B0B</color>
+    <color name="mosk_card">#191919</color>
+    <color name="mosk_field">#242424</color>
+    <color name="mosk_border">#353535</color>
+    <color name="mosk_purple">#C5B3F9</color>
+    <color name="mosk_orange">#FFAA18</color>
+    <color name="mosk_green">#62D84E</color>
+    <color name="mosk_red">#E51919</color>
+    <color name="mosk_text">#F2F2F2</color>
+    <color name="mosk_muted">#969696</color>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/bg_card">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Proxy" android:textColor="@color/mosk_text" android:textSize="26sp"/>
+        <RadioGroup android:id="@+id/rgProtocol" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/rbHttp" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="HTTP"/>
+            <RadioButton android:id="@+id/rbHttps" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="HTTPS"/>
+            <RadioButton android:id="@+id/rbSocks5" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="SOCKS5"/>
+            <RadioButton android:id="@+id/rbSocks4" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="SOCKS4"/>
+        </RadioGroup>
+        <EditText android:id="@+id/etHost" android:layout_width="match_parent"
+            android:layout_height="58dp" android:hint="Servidor (ej. 45.10.20.30)"
+            android:background="@drawable/bg_field" android:textColor="@color/mosk_text"/>
+        <EditText android:id="@+id/etPort" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="10dp"
+            android:hint="Puerto (ej. 8080)" android:background="@drawable/bg_field"
+            android:textColor="@color/mosk_text" android:inputType="number"/>
+        <EditText android:id="@+id/etUser" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="10dp"
+            android:hint="Usuario (opcional)" android:background="@drawable/bg_field"
+            android:textColor="@color/mosk_text"/>
+        <EditText android:id="@+id/etPass" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="10dp"
+            android:hint="Contraseña (opcional)" android:background="@drawable/bg_field"
+            android:textColor="@color/mosk_text" android:inputType="textPassword"/>
+        <Button android:id="@+id/btnTest" android:layout_width="match_parent"
+            android:layout_height="56dp" android:layout_marginTop="14dp"
+            android:text="🧪 Probar Proxy" android:textAllCaps="false"/>
+        <TextView android:id="@+id/tvProxyResult" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="10dp"
+            android:textColor="@color/mosk_muted"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
+            android:layout_marginTop="12dp">
+            <Button android:id="@+id/btnClear" android:layout_width="0dp"
+                android:layout_height="56dp" android:layout_weight="1"
+                android:text="Directo" android:textAllCaps="false"/>
+            <Button android:id="@+id/btnSave" android:layout_width="0dp"
+                android:layout_height="56dp" android:layout_weight="1"
+                android:layout_marginStart="8dp" android:text="Guardar"
+                android:textAllCaps="false" android:background="@drawable/bg_purple"/>
+        </LinearLayout>
+        <TextView android:id="@+id/btnCancel" android:layout_width="match_parent"
+            android:layout_height="52dp" android:gravity="center" android:text="CANCELAR"
+            android:textColor="@color/mosk_muted" android:clickable="true"/>
+    </LinearLayout>
+</ScrollView>

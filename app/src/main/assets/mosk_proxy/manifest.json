@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Mosk Proxy Bridge",
+  "version": "1.0.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "proxy@mosk.local",
+      "strict_min_version": "91.1"
+    }
+  },
+  "permissions": ["proxy","webRequest","webRequestBlocking","<all_urls>","nativeMessaging"],
+  "background": {"scripts": ["background.js"]}
+}

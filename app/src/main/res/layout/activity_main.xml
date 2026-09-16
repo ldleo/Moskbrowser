@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/mosk_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:gravity="center_vertical" android:paddingStart="16dp"
+        android:paddingEnd="10dp" android:background="#101010">
+        <TextView android:id="@+id/tvNetworkStatus"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🌐 IP: consultando..."
+            android:textColor="@color/mosk_muted" android:textSize="13sp"/>
+        <TextView android:id="@+id/btnRefreshIp"
+            android:layout_width="42dp" android:layout_height="42dp"
+            android:gravity="center" android:text="↻"
+            android:textColor="@color/mosk_text" android:textSize="24sp"
+            android:clickable="true" android:focusable="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="76dp"
+        android:gravity="center_vertical" android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Mosk"
+            android:textColor="@color/mosk_text" android:textSize="25sp"/>
+        <Button android:id="@+id/btnProfiles" android:layout_width="wrap_content"
+            android:layout_height="48dp" android:text="Perfiles" android:textAllCaps="false"/>
+        <Button android:id="@+id/btnFlash" android:layout_width="wrap_content"
+            android:layout_height="48dp" android:layout_marginStart="8dp"
+            android:text="⚡ Flash" android:textAllCaps="false"
+            android:background="@drawable/bg_orange"/>
+        <Button android:id="@+id/btnNew" android:layout_width="wrap_content"
+            android:layout_height="48dp" android:layout_marginStart="8dp"
+            android:text="+ Nuevo" android:textAllCaps="false"
+            android:background="@drawable/bg_purple"/>
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1">
+
+        <LinearLayout android:id="@+id/profilesScreen"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/tvEmpty"
+                android:layout_width="match_parent" android:layout_height="0dp"
+                android:layout_weight="1" android:gravity="center"
+                android:text="Sin perfiles todavía" android:textColor="@color/mosk_muted"
+                android:textSize="28sp"/>
+
+            <ScrollView android:id="@+id/profileScroll"
+                android:layout_width="match_parent" android:layout_height="0dp"
+                android:layout_weight="1" android:visibility="gone">
+                <LinearLayout android:id="@+id/profileContainer"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp"/>
+            </ScrollView>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="92dp"
+                android:padding="12dp">
+                <Button android:id="@+id/btnFlashBig"
+                    android:layout_width="0dp" android:layout_height="64dp"
+                    android:layout_weight="1" android:text="⚡ Sesión Flash"
+                    android:textAllCaps="false" android:textSize="16sp"
+                    android:background="@drawable/bg_orange"/>
+                <Button android:id="@+id/btnNewBig"
+                    android:layout_width="0dp" android:layout_height="64dp"
+                    android:layout_weight="1" android:layout_marginStart="10dp"
+                    android:text="+ Nuevo perfil" android:textAllCaps="false"
+                    android:textSize="16sp" android:background="@drawable/bg_purple"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/browserScreen"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="58dp"
+                android:gravity="center_vertical" android:padding="8dp">
+                <TextView android:id="@+id/tvActive" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="🟢 Sesión" android:textColor="@color/mosk_text"
+                    android:textSize="14sp"/>
+                <Button android:id="@+id/btnMinimize" android:layout_width="wrap_content"
+                    android:layout_height="48dp" android:text="Minimizar" android:textAllCaps="false"/>
+                <Button android:id="@+id/btnClean" android:layout_width="wrap_content"
+                    android:layout_height="48dp" android:layout_marginStart="6dp"
+                    android:text="Clean" android:textAllCaps="false"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/geckoContainer"
+                android:layout_width="match_parent" android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
